@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proteção Infantil (Art. 14 LGPD), ECA & CDC — Espaço Crescer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;700&family=Lora:wght@400;500&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para termos e Art. 14 LGPD</a>
+
+  <div class="top-notice-bar">
+    <div class="top-notice-inner">
+      <a href="/index.html" style="color: #FFFFFF; text-decoration: none; font-weight: 800;">← Voltar para o Espaço Crescer</a>
+      <span>Conformidade ECA, Art. 14 LGPD & Código de Defesa do Consumidor</span>
+    </div>
+  </div>
+
+  <main id="conteudo-principal" class="page-wrap">
+    <h1 style="font-size: 2rem; font-weight: 900; margin-bottom: 16px;">Proteção de Dados de Crianças (Art. 14 LGPD), ECA & CDC</h1>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+      <article class="workshop-card">
+        <h2 style="font-size: 1.25rem; font-weight: 900; margin-bottom: 8px;">1. Art. 14 da LGPD (Melhor Interesse da Criança)</h2>
+        <p style="font-family: var(--font-serif); font-size: 0.92rem; color: var(--text-body);">
+          No agendamento online coletamos apenas o nome do responsável legal e a faixa etária geral, exigindo consentimento específico e em destaque de pelo menos um dos pais (Art. 14, § 1º da Lei nº 13.709/2018).
+        </p>
+      </article>
+
+      <article class="workshop-card">
+        <h2 style="font-size: 1.25rem; font-weight: 900; margin-bottom: 8px;">2. Transparência Contratual e Cancelamento (CDC)</h2>
+        <p style="font-family: var(--font-serif); font-size: 0.92rem; color: var(--text-body);">
+          Nossos planos mensais não possuem cláusulas abusivas de fidelidade forçada. O cancelamento ou alteração de carga horária pode ser solicitado a qualquer momento pela secretaria.
+        </p>
+      </article>
+
+      <article class="workshop-card">
+        <h2 style="font-size: 1.25rem; font-weight: 900; margin-bottom: 8px;">3. Canal de Direitos do Responsável Legal (DPO)</h2>
+        <form id="form-lgpd-crescer" novalidate>
+          <div class="form-group">
+            <label for="lgpd-nome" class="form-label">Nome do Responsável Legal *</label>
+            <input type="text" id="lgpd-nome" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="lgpd-email" class="form-label">E-mail *</label>
+            <input type="email" id="lgpd-email" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="lgpd-tipo" class="form-label">Direito Solicitado</label>
+            <select id="lgpd-tipo" class="form-select">
+              <option value="Confirmacao">Confirmar tratamento de dados</option>
+              <option value="Acesso">Cópia de dados cadastrais</option>
+              <option value="Exclusao">Revogar consentimento parental e excluir dados</option>
+            </select>
+          </div>
+          <div id="lgpd-cr-fb" aria-live="polite" style="margin-bottom: 10px;"></div>
+          <button type="submit" class="btn btn-teal" style="width: 100%;">Registrar Protocolo no DPO</button>
+        </form>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-wrap" style="padding: 0;">
+      <div class="fictional-box">
+        <strong>⚠️ AVISO DE DEMONSTRAÇÃO DE PORTFÓLIO (DADOS FICTÍCIOS)</strong>
+        <p>Este site é uma demonstração tecnológica desenvolvida pela Nuvetec. Todos os dados empresariais são fictícios.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/termos.js"></script>
+</body>
+</html>

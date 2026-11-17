@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel da Coordenação Pedagógica — Espaço Crescer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;700&family=Lora:wght@400;500&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o painel da coordenação</a>
+
+  <div class="top-notice-bar">
+    <div class="top-notice-inner">
+      <a href="/index.html" style="color: #FFFFFF; text-decoration: none; font-weight: 800;">← Voltar para o Portal dos Pais</a>
+      <span>Painel da Coordenação Pedagógica (Portfólio Nuvetec)</span>
+    </div>
+  </div>
+
+  <main id="conteudo-principal" class="page-wrap">
+    <section id="sec-login-crescer" style="max-width: 500px; margin: 20px auto;" aria-labelledby="coord-login-title">
+      <div class="workshop-card" style="padding: 32px;">
+        <h1 id="coord-login-title" style="font-size: 1.65rem; font-weight: 900; margin-bottom: 8px;">Coordenação & Secretaria</h1>
+        <p style="font-family: var(--font-serif); font-size: 0.92rem; color: var(--text-muted); margin-bottom: 16px;">
+          Acompanhe as famílias que agendaram visita guiada e gerencie o status de matrículas.
+        </p>
+        <div style="display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap;">
+          <button type="button" id="btn-demo-coord" class="btn btn-outline" style="min-height: 36px; padding: 6px 12px; font-size: 0.82rem;">Preencher Coordenadora</button>
+          <button type="button" id="btn-demo-sec" class="btn btn-outline" style="min-height: 36px; padding: 6px 12px; font-size: 0.82rem;">Preencher Secretaria</button>
+        </div>
+        <form id="form-login-crescer" novalidate>
+          <div class="form-group">
+            <label for="cr-email" class="form-label">E-mail Institucional</label>
+            <input type="email" id="cr-email" class="form-input" value="coordenacao@espacocrescer-demo.com.br" required>
+          </div>
+          <div class="form-group">
+            <label for="cr-senha" class="form-label">Senha</label>
+            <input type="password" id="cr-senha" class="form-input" value="Crescer@2026" required>
+          </div>
+          <div id="cr-login-fb" aria-live="polite" style="margin-bottom: 10px;"></div>
+          <button type="submit" class="btn btn-teal" style="width: 100%;">Acessar Painel Pedagógico</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="sec-painel-crescer" style="display: none;" aria-label="Visitas de Famílias Agendadas">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 12px;">
+        <div>
+          <h1 style="font-size: 1.9rem; font-weight: 900;">Visitas Guiadas de Famílias</h1>
+          <p id="cr-user-info" style="color: var(--primary-teal); font-weight: 800;"></p>
+        </div>
+        <button type="button" id="btn-sair-crescer" class="btn btn-outline">Sair</button>
+      </div>
+      <div id="lista-visitas-admin" style="display: grid; gap: 16px;"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-wrap" style="padding: 0;">
+      <div class="fictional-box">
+        <strong>⚠️ AVISO DE DEMONSTRAÇÃO DE PORTFÓLIO (DADOS FICTÍCIOS)</strong>
+        <p>Painel demonstrativo desenvolvido pela Nuvetec. Todos os dados são fictícios.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/painel.js"></script>
+</body>
+</html>

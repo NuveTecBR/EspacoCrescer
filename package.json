@@ -1,0 +1,11 @@
+{
+  "name": "espacocrescer",
+  "version": "1.0.0",
+  "description": "Espaço Crescer Contraturno Escolar & Centro Pedagógico (Método ENDS)",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm --prefix backend install",
+    "start": "npm --prefix backend start",
+    "test": "npm --prefix backend test"
+  }
+}
