@@ -109,7 +109,7 @@ export function inicializarCookiesLgpd() {
     <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;">
       <div style="font-size: 0.88rem; max-width: 62ch;">
         <strong style="color: #0F766E; display: block;">🍪 Privacidade e Proteção Infantil (Art. 14 LGPD):</strong>
-        Utilizamos apenas cookies técnicos essenciais. Não realizamos rastreamento publicitário infantil. Veja nossos <a href="/termos.html" style="color: #C2410C; font-weight: 800;">Termos, ECA e Direitos LGPD</a>.
+        Utilizamos apenas cookies técnicos essenciais. Não realizamos rastreamento publicitário infantil. Veja nossos <a href="./termos.html" style="color: #C2410C; font-weight: 800;">Termos, ECA e Direitos LGPD</a>.
       </div>
       <button type="button" id="btnCookieCrescer" class="btn btn-teal" style="min-height: 40px; padding: 8px 18px;">Compreendi e Aceito</button>
     </div>
