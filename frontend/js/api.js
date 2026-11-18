@@ -35,7 +35,55 @@ export function limparSessao() {
   localStorage.removeItem(USER_KEY);
 }
 
+async function staticDemoFetch(endpoint, options = {}) {
+  const { DEMO_DATA } = await import('./demo-data.js');
+  const url = new URL(endpoint, 'https://demo.local');
+  const path = url.pathname;
+  const body = options.body ? JSON.parse(options.body) : {};
+
+  if (path === '/api/rotina') {
+    const turno = url.searchParams.get('turno');
+    return turno ? DEMO_DATA.rotina.filter(r => r.turno === turno) : [...DEMO_DATA.rotina];
+  }
+
+  if (path === '/api/oficinas') {
+    const eixo = url.searchParams.get('eixo');
+    return eixo ? DEMO_DATA.oficinas.filter(o => o.eixo_pedagogico === eixo) : [...DEMO_DATA.oficinas];
+  }
+
+  if (path === '/api/planos/simular') {
+    const freq = Number(body.frequencia_semanal || 5);
+    const bases = { 2: 680, 3: 890, 5: 1180 };
+    const base = bases[freq] || 1180;
+    const nutricao = body.inclui_almoco ? 240 : 0;
+    const subtotal = base + nutricao;
+    const desc = body.possui_irmao ? Number((subtotal * 0.15).toFixed(2)) : 0;
+    return {
+      frequencia_semanal: freq,
+      inclui_almoco: Boolean(body.inclui_almoco),
+      valor_base_pedagogico: base,
+      adicional_nutricao: nutricao,
+      desconto_irmao: desc,
+      mensalidade_estimada: Number((subtotal - desc).toFixed(2))
+    };
+  }
+
+  if (path === '/api/visitas') {
+    const protocolo = `ECR-DEMO-${Math.floor(1000 + Math.random() * 9000)}`;
+    return {
+      protocolo,
+      whatsapp_url: `https://wa.me/5551999990000?text=${encodeURIComponent(`Olá! Visita Espaço Crescer (${protocolo})`)}`
+    };
+  }
+
+  return {};
+}
+
 export async function apiFetch(endpoint, options = {}) {
+  if (typeof window !== 'undefined' && window.location.hostname.endsWith('github.io')) {
+    return staticDemoFetch(endpoint, options);
+  }
+
   const token = obterToken();
   const headers = {
     'Content-Type': 'application/json',
